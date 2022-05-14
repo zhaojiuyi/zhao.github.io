@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>博客编写测试</title>
+      <link href="/2022/05/14/%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99%E6%B5%8B%E8%AF%95/"/>
+      <url>/2022/05/14/%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<h2 id="我是文章的标题"><a href="#我是文章的标题" class="headerlink" title="我是文章的标题"></a>我是文章的标题</h2><h3 id="我是文章的副标题"><a href="#我是文章的副标题" class="headerlink" title="我是文章的副标题"></a>我是文章的副标题</h3><h4 id="我是文章摘要"><a href="#我是文章摘要" class="headerlink" title="我是文章摘要"></a>我是文章摘要</h4><p>我是文章内容</p><pre class="language-none"><code class="language-none">我是文章代码</code></pre><table><thead><tr><th>12</th><th>34</th><th>56</th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table><p><img src="D:\Mytest\Myblog\hexo\source\medias\16.jpg" alt="16"></p><ul><li><p>测试完成</p><h3 id="我是最后一段"><a href="#我是最后一段" class="headerlink" title="我是最后一段"></a>我是最后一段</h3></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 分类测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+            <tag> 博客搭建 </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/05/10/hello-world/"/>
+      <url>/2022/05/10/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 说明 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo+Github博客搭建记录</title>
+      <link href="/2022/05/08/myFirst/"/>
+      <url>/2022/05/08/myFirst/</url>
+      
+        <content type="html"><![CDATA[<h2 id="这是一段测试文字"><a href="#这是一段测试文字" class="headerlink" title="这是一段测试文字"></a>这是一段测试文字</h2><ul><li><p>这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字</p></li><li><p>这是一段测试文字</p></li><li><p>这是一段测试文字</p></li><li><p>这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字</p></li></ul><pre class="language-none"><code class="language-none">这是一段测试代码这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字</code></pre><ul><li>这是一段测试文字</li><li>这是一段测试文字</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件安装与配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Github </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
