@@ -4,27 +4,27 @@
   
     
     <entry>
-      <title>博客编写测试</title>
-      <link href="/2022/05/14/%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99%E6%B5%8B%E8%AF%95/"/>
-      <url>/2022/05/14/%E5%8D%9A%E5%AE%A2%E7%BC%96%E5%86%99%E6%B5%8B%E8%AF%95/</url>
+      <title>基于hexo的博客搭建记录</title>
+      <link href="/2022/05/14/myFirstBlog/"/>
+      <url>/2022/05/14/myFirstBlog/</url>
       
-        <content type="html"><![CDATA[<h2 id="我是文章的标题"><a href="#我是文章的标题" class="headerlink" title="我是文章的标题"></a>我是文章的标题</h2><h3 id="我是文章的副标题"><a href="#我是文章的副标题" class="headerlink" title="我是文章的副标题"></a>我是文章的副标题</h3><h4 id="我是文章摘要"><a href="#我是文章摘要" class="headerlink" title="我是文章摘要"></a>我是文章摘要</h4><p>我是文章内容</p><pre class="language-none"><code class="language-none">我是文章代码</code></pre><table><thead><tr><th>12</th><th>34</th><th>56</th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table><p><img src="D:\Mytest\Myblog\hexo\source\medias\16.jpg" alt="16"></p><ul><li><p>测试完成</p><h3 id="我是最后一段"><a href="#我是最后一段" class="headerlink" title="我是最后一段"></a>我是最后一段</h3></li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p>本文将使用基于node.js的一个快速、简介且高效的博客框架————hexo，分三步完成一个博客网站的搭建，由于hexo是建立在node之上，建议先在本地完成node.js环境的配置。</p><h5 id="相关链接："><a href="#相关链接：" class="headerlink" title="相关链接："></a>相关链接：</h5><p>hexo官方文档：<a href="https://hexo.bootcss.com/docs/">https://hexo.bootcss.com/docs/</a></p><p>hexo主题配置： <a href="https://easyhexo.com/2-Theme-use-and-config/">https://easyhexo.com/2-Theme-use-and-config/</a></p><ul><li>第一步：初步完成本地博客项目的搭建</li><li>第二步：使用matery主题美化博客</li><li>第三步：将博客部署到github</li></ul>]]></content>
       
       
       <categories>
           
-          <category> 分类测试 </category>
+          <category> 博客搭建 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 测试 </tag>
-            
-            <tag> 博客搭建 </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> node </tag>
+            
+            <tag> npm </tag>
             
         </tags>
       
@@ -46,35 +46,6 @@
           
       </categories>
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hexo+Github博客搭建记录</title>
-      <link href="/2022/05/08/myFirst/"/>
-      <url>/2022/05/08/myFirst/</url>
-      
-        <content type="html"><![CDATA[<h2 id="这是一段测试文字"><a href="#这是一段测试文字" class="headerlink" title="这是一段测试文字"></a>这是一段测试文字</h2><ul><li><p>这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字</p></li><li><p>这是一段测试文字</p></li><li><p>这是一段测试文字</p></li><li><p>这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字</p></li></ul><pre class="language-none"><code class="language-none">这是一段测试代码这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字这是一段测试文字</code></pre><ul><li>这是一段测试文字</li><li>这是一段测试文字</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 软件安装与配置 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> Github </tag>
-            
-            <tag> 博客 </tag>
-            
-        </tags>
       
     </entry>
     
