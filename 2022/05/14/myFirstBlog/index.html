@@ -486,14 +486,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    437
+                    562
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -539,8 +539,17 @@ hexo s</code></pre>
 <li>hexo generate  生成静态文件，也就是生成博客页面 ，可以简写为 hexo g</li>
 <li>hexo server       从本地服务器打开博客，可以简写为hexo s</li>
 <li>hexo deploy      将博客进行部署，这个暂时不进行描述</li>
+<li>hexo new page pagename 新建一个页面</li>
+<li>hexo new blogname    新建一篇博客，也就是创建一个markdown文件，存放在项目根目录下的source&#x2F;_posts下</li>
 </ul>
-<p>然后看一下项目的目录结构</p>
+<p>然后看一下项目的基本目录结构</p>
+<pre class="language-none"><code class="language-none">node_module   --项目依赖文件夹
+public        --生成的静态网页目录
+themes        --主题文件夹，下载的主题放到这里面
+source        --与我们接触最多的一个文件夹，里面放着各种页面，文章和图片
+	-_posts   --写的博客就放在这里面
+_config.yml   --项目配置文件</code></pre>
+
 
                 
             </div>
