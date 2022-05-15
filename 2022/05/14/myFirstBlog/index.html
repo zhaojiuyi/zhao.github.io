@@ -486,14 +486,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    716
+                    910
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -531,7 +531,7 @@ hexo s</code></pre>
 
 <p>此时可以看到<img src="/2022/05/14/myFirstBlog/hexo-s.png" alt="hexo-s"></p>
 <p>在浏览器输入localhost:4000即可打开博客页面，如下图所示</p>
-<p><img src="/2022/05/14/myFirstBlog/hexo-s-16526042726562.png" alt="hexo-s"></p>
+<p><img src="/2022/05/14/myFirstBlog/image.png" alt="hexo-s"></p>
 <p>这样，博客搭建的第一步就完成了，顺便介绍一下hexo常用的几个命令</p>
 <ul>
 <li>hexo clean		清空当前编译好的静态文件以及缓存文件，可以理解为将博客网页清空</li>
@@ -557,6 +557,22 @@ _config.yml   --项目配置文件</code></pre>
 <p>然后根据上图修改配置文件即可，修改完成后记得重新生成静态文件hexo g，然后重新运行hexo s</p>
 <p>查看效果</p>
 <p><img src="/2022/05/14/myFirstBlog/myblog.png" alt="myblog"></p>
+<p>关于博客主题的相关配置，在themes下的hexo-theme-matery下有一个_config.yml的配置文件，里面都有注释，可以进行相关功能的添加</p>
+<p>关于标签、分类、关于等界面点击后没有页面的情况，我们查看hexo-theme-matery文档</p>
+<p><a target="_blank" rel="noopener" href="https://easyhexo.com/2-Theme-use-and-config/2-14-hexo-theme-matery/">https://easyhexo.com/2-Theme-use-and-config/2-14-hexo-theme-matery/</a></p>
+<p><img src="/myFirstBlog/image-20220515224748462.png" alt="image-20220515224748462"></p>
+<p>根据官方文档进行相关界面的配置即可，这里以categories为例</p>
+<pre class="language-none"><code class="language-none">hexo new page &quot;categories&quot;</code></pre>
+
+<p>然后在source目录下找到categories&#x2F;index.md，修改如下，即可，</p>
+<pre class="language-none"><code class="language-none">---
+title: categories
+date: 2018-09-30 17:25:30  &#x2F;&#x2F;时间可不做修改
+type: &quot;categories&quot;
+layout: &quot;categories&quot;
+---</code></pre>
+
+<p>其他页面也是一样的方法，配置完成后重新打包静态文件，hexo g然后运行就可以了</p>
 
                 
             </div>
