@@ -323,7 +323,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias%5CmyFirstBlog%5Cblogindex.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myFirstBlog/blogindex.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -1076,7 +1076,7 @@ _config.yml   --项目配置文件</code></pre>
                 <a href="/2022/05/14/myFirstBlog/">
                     <div class="card-image">
                         
-                        <img src="/medias%5CmyFirstBlog%5Cblogindex.png" class="responsive-img" alt="基于hexo的博客搭建记录">
+                        <img src="/medias/myFirstBlog/blogindex.png" class="responsive-img" alt="基于hexo的博客搭建记录">
                         
                         <span class="card-title">基于hexo的博客搭建记录</span>
                     </div>
@@ -1178,7 +1178,7 @@ _config.yml   --项目配置文件</code></pre>
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
+        if (('' + selection).length < Number.parseInt('50')) {
             return;
         }
 
@@ -1250,7 +1250,7 @@ _config.yml   --项目配置文件</code></pre>
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
+            collapseDepth: Number('1'),
             headingSelector: 'h2, h3, h4'
         });
 
