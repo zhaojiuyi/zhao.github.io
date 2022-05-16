@@ -296,11 +296,7 @@ i:hover {
         width: 95%;
     }
 }
-/* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. */ 
-.bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
-    opacity: 0.9;
-}
+
 
 
 /*中等屏幕下(平板类)的样式*/
@@ -553,7 +549,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #053c87 20%, #00307a 80%);
+    background-image: linear-gradient(to right, #6883a7 30%, #00307a 80%);
 }
 .page-footer{
     background: rgba(0, 0, 0, 0);
