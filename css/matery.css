@@ -105,8 +105,8 @@ body.DarkMode #stars3:after {
 .Cuteen_DarkPlanet {
     z-index: 9999;
     position: fixed;
-    left: -50%;
-    top: -50%;
+    left: -53%;
+    top: -60%;
     width: 200%;
     height: 200%;
     -webkit-animation: CuteenPlanetMove 2s cubic-bezier(0.7, 0, 0, 1);
@@ -125,7 +125,7 @@ body.DarkMode #stars3:after {
 
 @keyframes CuteenPlanetMove {
     0% {
-        transform: rotate(0);
+        transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
@@ -134,7 +134,7 @@ body.DarkMode #stars3:after {
 
 .Cuteen_DarkPlanet:after {
     position: absolute;
-    left: 35%;
+    left: 47%;
     top: 40%;
     width: 9.375rem;
     height: 9.375rem;
@@ -162,8 +162,30 @@ body.DarkMode #stars3:after {
 }
 
 .sum-moon-box i {
+    -webkit-animation: rotate-center 1s infinite ;
+    animation: rotate-center 1s infinite ;
     font-size: 1.8rem;
     line-height: 48px !important;
+}
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 /* 字体颜色变灰白色 */
@@ -197,7 +219,7 @@ body.DarkMode header .side-nav .mobile-head .logo-desc,
 body.DarkMode header .side-nav .menu-list a,
 body.DarkMode .bg-cover .post-title,
 body.DarkMode.read .bg-cover .description {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* 背景颜色变灰色 */
