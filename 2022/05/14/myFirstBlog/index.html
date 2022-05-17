@@ -549,14 +549,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -577,7 +577,7 @@
                 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本文将使用基于node.js的一个快速、简介且高效的博客框架————hexo，完成一个博客网站的搭建，由于hexo是建立在node之上，建议先在本地完成node.js环境的配置。</p>
 <h5 id="相关链接："><a href="#相关链接：" class="headerlink" title="相关链接："></a>相关链接：</h5><p>hexo官方文档：<a target="_blank" rel="noopener" href="https://hexo.bootcss.com/docs/">https://hexo.bootcss.com/docs/</a></p>
 <p>hexo主题配置： <a target="_blank" rel="noopener" href="https://easyhexo.com/2-Theme-use-and-config/">https://easyhexo.com/2-Theme-use-and-config/</a></p>
-<h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><h4 id="第一步，项目初始化"><a href="#第一步，项目初始化" class="headerlink" title="第一步，项目初始化"></a>第一步，项目初始化</h4><p>1、使用npm下载hexo</p>
+<h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建<br/></h2><h4 id="一，项目初始化"><a href="#一，项目初始化" class="headerlink" title="一，项目初始化"></a>一，项目初始化</h4><p>1、使用npm下载hexo</p>
 <pre class="language-none"><code class="language-none">npm install -g hexo-cli</code></pre>
 
 <p>2、创建一个项目文件夹(目录随意)，名称随意，我这里以hexo为例</p>
@@ -612,7 +612,7 @@ source        --与我们接触最多的一个文件夹，里面放着各种页�
 	-_posts   --写的博客就放在这里面
 _config.yml   --项目配置文件</code></pre>
 
-<h4 id="第二步，博客界面美化"><a href="#第二步，博客界面美化" class="headerlink" title="第二步，博客界面美化"></a>第二步，博客界面美化</h4><p>hexo官网给我们提供了很多免费的主题，<a target="_blank" rel="noopener" href='https://hexo.bootcss.com/themes/'>传送门</a>，可以在这里寻找自己喜欢的主题，用git克隆到themes目录后，在_config.yml配置文件进行切换，如图</p>
+<h4 id="二，博客界面美化"><a href="#二，博客界面美化" class="headerlink" title="二，博客界面美化"></a>二，博客界面美化</h4><p>hexo官网给我们提供了很多免费的主题，<a target="_blank" rel="noopener" href='https://hexo.bootcss.com/themes/'>传送门</a>，可以在这里寻找自己喜欢的主题，用git克隆到themes目录后，在_config.yml配置文件进行切换，如图</p>
 <p><img src="/2022/05/14/myFirstBlog/themes.png" alt="themes"></p>
 <p>这里我使用的是matery主题，是把他克隆到项目根目录下的themes主题目录下</p>
 <pre class="language-none"><code class="language-none">git clone https:&#x2F;&#x2F;github.com&#x2F;blinkfox&#x2F;hexo-theme-matery.git themes&#x2F;hexo-theme-matery</code></pre>
@@ -636,7 +636,7 @@ layout: &quot;categories&quot;
 ---</code></pre>
 
 <p>其他页面也是一样的方法，配置完成后重新打包静态文件，hexo g然后运行就可以了</p>
-<h4 id="来个开箱即用"><a href="#来个开箱即用" class="headerlink" title="来个开箱即用"></a>来个开箱即用</h4><p>使用如下命令，直接克隆博主搭建好的博客到本地</p>
+<h5 id="来个开箱即用"><a href="#来个开箱即用" class="headerlink" title="来个开箱即用"></a>来个开箱即用</h5><p>使用如下命令，直接克隆博主搭建好的博客到本地</p>
 <pre class="language-none"><code class="language-none">git clone https:&#x2F;&#x2F;github.com&#x2F;zhaojiuyi&#x2F;hexo-matery.git</code></pre>
 
 <p>使用hexo g生成静态文件，然后hexo s运行后在浏览器输入localhost:4000打开，功能虽然不多，也还能满足基本需求。关于部署的问题网上教程很多，暂时先不做叙述了。</p>
@@ -645,6 +645,15 @@ hexo clean
 hexo g
 hexo s</code></pre>
 
+<h4 id="三，加载速度优化"><a href="#三，加载速度优化" class="headerlink" title="三，加载速度优化"></a>三，加载速度优化</h4><p>在使用过程中发现，有时候会出现加载缓慢的问题，我们打开控制台，点击网络，这时候发现一个名叫typed.js的文件请求失败了，怀疑是这个文件一直请求不成功，导致网页一直阻塞在加载状态。</p>
+<p><img src="/2022/05/14/myFirstBlog/image-20220517171949910.png" alt="image-20220517171949910"></p>
+<p>这是一个用来实现首页打字效果的js插件，我们在主题目录下（也就是hexo-theme-matery文件夹下）的layout\_partial下找到一个bg-cover-content.ejs的文件，打开可看到如下</p>
+<p><img src="/2022/05/14/myFirstBlog/image-20220517172408357.png" alt="image-20220517172408357"></p>
+<p>换一个可用的cdn引入即可，这里我使用的是下面这个，当然根据个人情况而定，也可以使用其他的</p>
+<pre class="language-none"><code class="language-none">https:&#x2F;&#x2F;cdn.bootcdn.net&#x2F;ajax&#x2F;libs&#x2F;typed.js&#x2F;2.0.12&#x2F;typed.min.js</code></pre>
+
+<p><img src="/2022/05/14/myFirstBlog/image-20220517172515632.png" alt="image-20220517172515632"></p>
+<p>然后重新加载静态文件，感觉到加载速度提升了很多</p>
 <p>最后推荐几篇博客</p>
 <p>hexo+github博客搭建和部署，个人认为十分详细：,<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_58608526/article/details/124652412">https://blog.csdn.net/qq_58608526/article/details/124652412</a></p>
 <p>页面加载动画：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43662760/article/details/122311217">https://blog.csdn.net/weixin_43662760/article/details/122311217</a></p>
