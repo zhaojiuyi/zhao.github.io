@@ -12,7 +12,14 @@ jQuery(document).ready(function ($) {
             "left": x,
             "position": "absolute",
             "font-weight": "bold",
-            "color": "#FF0000"
+            "color": function(){    
+    return  '#' + (function(color){    
+         return (color +=  '0123456789abcdef'[Math.floor(Math.random()*16)])    
+         && (color.length == 6) ?  color : arguments.callee(color);    
+    })('');    
+ } 
+            // "color": "#FF0000"
+
         });
         $("body").append($i);
         $i.animate({

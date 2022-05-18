@@ -210,6 +210,8 @@
     
     <a href="/gallery" class="waves-effect waves-light">
       
+      <i class="fa fa-images" style="zoom: 0.6;"></i>
+      
       <span>相册</span>
     </a>
     
@@ -320,7 +322,7 @@
 	  
 		<a href="/gallery" class="waves-effect waves-light">
 			
-				<i class="fas fa-fw fa-link"></i>
+			    <i class="fa-fw fa fa-images"></i>
 			
 			相册
 		</a>
@@ -402,14 +404,15 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
+    
+<div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
                 
-                    subtitle
+                    🐏🐏🐏🐏
                 
             </div>
 
@@ -417,7 +420,6 @@
                 
                 <span id="subtitle"></span>
                 <script type="text/javascript" src="/js/typed.min.js"></script>
-                <script src="https://zhaojiuyi.github.io/medias/js/typed.min.js"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
                         strings: [ 
@@ -462,41 +464,17 @@
 
     </div>
 </div>
+
+<!-- Created by hehung on 20191208 -- >
 <!-- 增加相册显示的特效样式 -->
 <style>
-    .photo {
-        padding: 0 40px!important;
-        display: inline-block;
-        position: relative;
-        transition: all .6s;
-    }
-    .biaotiss {
-        padding: 8px 10px;
-        color: #4c4c4e;
-        text-align: center;
-        font-weight: 400;
-        font-size: 18px;
-    }
-    .img-item {
-        padding: .2rem;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 1px 2px 2px 0 #aaa;
-        transition: all .4s cubic-bezier(.63,.15,.03,1.12);
-        margin-bottom: 20px;
-    }
-    .photo:nth-child(odd) {
-        transform: rotateZ(-5deg);
-    }    
-    .photo:nth-child(even) {
-        transform: rotateZ(5deg);
-    }
     .text_des{
         position: absolute;
         width: 92%;
         height: 100%;
         top: 0;
         color: #000;
+    /*    opacity: 0;     */
         overflow: hidden;
     }
     .text_des h3{
@@ -509,7 +487,7 @@
         top: 10%;
         font-style: italic;
         text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-        /*transform: translateX(200px);  */
+    /*    transform: translateX(200px);  */
     }
     .text_des p{
         left: 15px;
@@ -519,45 +497,10 @@
         transition-delay: 0.2s;    */
     }
     .my-gallery .photo img {
-        border-radius: 10px;
-        height: 240px;
+        border-radius: 1px;
     }
-    .card .card-content {
-        padding: 24px 24px 24px 24px;
-    }
-    .miaoshus {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 95%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-        font-size: 16px;
-        margin: 12px auto;
-    }
-    body.dark .miaoshus {
-        background: 0 0;
-        border: 1px dashed #888;
-    }
-    .img-item {
-            transition: all 0.4s ease-out;
-        }
-        .img-item a img{
-            opacity: 1;
-            transition: all 0.4s ease-out;
-        }
-        .img-item a:hover img{
-            opacity: 0.8;
-        }   
-        .biaotiss {
-            font-family: MV Boli;
-        }   
-        .miaoshus .title {
-        font-family: MV Boli;
-    } 
-    /*大屏幕下(桌面类)的样式*/
+
+     /*大屏幕下(桌面类)的样式*/
     @media only screen and (min-width: 993px) {
         .text_des h3{
             transform: translateX(200px);
@@ -570,39 +513,69 @@
             opacity: 0;
             transition: all 0.6s ease-in-out; 
         }
+        .img-item {
+            transition: all 0.4s ease-out;
+        }
+        .img-item a img{
+            opacity: 1;
+            transition: all 0.4s ease-out;
+        }
+        .img-item a:hover img{
+            opacity: 0.5;
+            transform: scale(1.05);
+        }
+        .img-item a:hover .text_des{
+        /*    opacity: 1;   */
+            transform: scale(1.05); 
+        }
+        .img-item a:hover .animate-text{
+            transform: translateX(0);
+            opacity: 1; 
+        }
     }
+
+
     /*小屏幕下(桌面类)的样式*/
-    @media only screen and (max-width: 500px) {
-        .my-gallery .photo img {
-            height: 186px;
+    @media only screen and (max-width: 992px) {
+        .img-item a img{
+            opacity: 0.75;
+        }
+        .animate-text {
+            opacity: 1;
         }
     }
 
 </style>
+
 <main class="content">
     <div class="container chip-container">
         <div class="card">
             <div class="card-content">
                 <div class="tag-title center-align">
-                    <div class="miaoshus">
-                        <div class="title center-align">“ 🐏 ”</div>
-                        <!--“ 相册介绍” -->                  
-                    </div>
+                    <i class="fa fa-images"></i>
+                    &nbsp;&nbsp;🐏
                 </div>
                 <div class="my-gallery">
                     <div class="row">
+                    <!-- <li class="grid-sizer"></li> --><!-- for Masonry column width -->
                     
                         
                         
                             
                             
-                            <div class="photo col s12 m6 l4">
+                            <div class="photo col s12 m6 l4" data-aos="zoom-in-up">
                                 <div class="img-item">
                                     <a href="./fy">
-                                        <img src="/medias/loading.svg" data-src="https://zhaojiuyi.github.io/medias/photo/fy/IMG_1026.JPG" class="responsive-img" alt="img"+0 />
-                                        <div class="biaotiss">“ fy ”<br>“ 2019-10 ”</div>
+                                        <img src="/medias/loading.gif" data-src="https://zhaojiuyi.github.io/medias/photo/fy/IMG_1026.JPG" class="responsive-img" alt="img"+0 />
+                                        <div class="text_des">
+                                            
+                                                <h3 class="animate-text">fy</h3>
+                                                <p class="animate-text">🐏</p>
+                                            
+                                            
+                                        </div>
                                     </a>
-                                </div>                              
+                                </div>
                             </div>
                             
                         
@@ -611,11 +584,13 @@
             </div>
         </div>
     </div>
+
     <script>
         start()
             $(window).on('scroll', function(){
-            start();
+             start();
         })
+
         function start(){
               //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
             $('.container img').not('[data-isLoaded]').each(function(){
@@ -624,7 +599,8 @@
                     loadImg($node);
                 }
             });
-        }
+         }
+
         //判断一个元素是不是出现在窗口(视野)
         function isShow($node){
             return $node.offset().top <= $(window).height() + $(window).scrollTop();
@@ -636,8 +612,11 @@
             $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
             $img.attr('data-isLoaded', 1);//已加载的图片做标记
         }
+
     </script>
+    
 </main>
+
 
 
     <footer class="page-footer bg-color">
@@ -647,16 +626,12 @@
 <style>
     .aplayer .aplayer-lrc p {
         
-        display: none;
-        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
     }
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
         
         font-size: 15px;
         color: #42b983;
@@ -892,6 +867,7 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
+    <script type="text/javascript" src="/js/click_show_text.js"></script>
 
     
 
