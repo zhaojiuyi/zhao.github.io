@@ -206,6 +206,15 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/gallery" class="waves-effect waves-light">
+      
+      <span>相册</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -303,6 +312,17 @@
 			    <i class="fa-fw fas fa-address-book"></i>
 			
 			友链
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/gallery" class="waves-effect waves-light">
+			
+				<i class="fas fa-fw fa-link"></i>
+			
+			相册
 		</a>
           
         </li>
@@ -1140,7 +1160,7 @@
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('50')) {
+        if (('' + selection).length < Number.parseInt('300')) {
             return;
         }
 
@@ -1593,6 +1613,8 @@ $(function () {
 
     
 
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
 </body>
