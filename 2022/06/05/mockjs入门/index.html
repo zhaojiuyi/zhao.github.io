@@ -5,8 +5,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 太阳当空丶赵">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="mockjs入门, 太阳当空丶赵">
+    <meta name="description" content="本篇文章介绍在后端接口尚未开发完成时，如何使用mockjs进行后端接口数据的模拟">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 燚</title>
+    <title>mockjs入门 | 燚</title>
     <link rel="stylesheet" type="text/css" href="/css/loading.css">
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -416,12 +416,12 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/mockjs/mock.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">mockjs入门</h1>
                 </div>
             </div>
         </div>
@@ -535,9 +535,17 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/nodejs/">
+                                <span class="chip bg-color">nodejs</span>
+                            </a>
+                        
+                            <a href="/tags/Mockjs/">
+                                <span class="chip bg-color">Mockjs</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -545,8 +553,8 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AF%B4%E6%98%8E/" class="post-category">
-                                说明
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                             </a>
                         
                     </div>
@@ -558,7 +566,7 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-10
+                    2022-06-05
                 </div>
                 
 
@@ -567,14 +575,14 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -592,19 +600,156 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
+                <h2 id="mockjs简介"><a href="#mockjs简介" class="headerlink" title="mockjs简介"></a>mockjs简介</h2><p>官方文档 <a target="_blank" rel="noopener" href="http://mockjs.com/">http://mockjs.com/</a></p>
+<h3 id="mockjs两大特性"><a href="#mockjs两大特性" class="headerlink" title="mockjs两大特性"></a>mockjs两大特性</h3><p><strong>数据类型丰富</strong><br>可以生成随机的文本、数字、布尔值、日期、邮箱、链接、图片、颜色等。</p>
+<p><strong>拦截 Ajax 请求</strong><br>不需要修改既有代码，即可以拦截 Ajax 请求，并返回模拟的响应数据。</p>
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>在实际的开发过程中，有时候后端接口还未开发完成，而前端又不想写静态页面，为了不影响前端开发进度。我们就可以使用mockjs进行后端接口和数据的模拟，mockjs可以拦截前端的ajax请求并返回生成的随机数据，以达到模拟后端接口的效果。</p>
+<p>当后端接口开发完成时，我们只需要取消mockjs的拦截作用，便能访问到真实的后端接口，并拿到后端真实的数据。</p>
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>首先我们电脑上需要安装nodejs，为我们提供本地运行环境</p>
+<p>现在开始创建项目</p>
+<h3 id="WebStrom创建"><a href="#WebStrom创建" class="headerlink" title="WebStrom创建"></a>WebStrom创建</h3><p>注：本文使用WebStrom作为开发工具，没有WebStrom的同学请跳过本小结，下一小节介绍其他方式创建项目。</p>
+<p>文件 → 新建 → 项目，选择nodejs，设置项目文件夹（文件夹为空），配置解释器和包管理器，这些只要安装了且正确配置了nodejs，WebStrom都会自动配置。下一步创建。</p>
+<p><img src="/mockjs%E5%85%A5%E9%97%A8/image-20220605223837238.png" alt="image-20220605223837238"></p>
+<p>在打开的项目中我们能看到一个<code>package.json</code>文件,在里面添加如下依赖</p>
+<pre class="language-json" data-language="json"><code class="language-json"><span class="token property">"dependencies"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">"mockjs"</span><span class="token operator">:</span> <span class="token string">"^1.1.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"require"</span><span class="token operator">:</span> <span class="token string">"^2.4.20"</span>
+ <span class="token punctuation">&#125;</span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo server</code></pre>
+<p><img src="/mockjs%E5%85%A5%E9%97%A8/image-20220605225825128.png" alt="image-20220605225825128"></p>
+<p>然后打开终端，运行<code>npm install</code>导入依赖，如下图表示成功，接下来会在项目根目录多出一个node_modules文件夹。此时我们的运行环境便搭建好了。</p>
+<p><img src="/mockjs%E5%85%A5%E9%97%A8/image-20220605224536800.png" alt="image-20220605224536800"></p>
+<h3 id="其他方式创建"><a href="#其他方式创建" class="headerlink" title="其他方式创建"></a>其他方式创建</h3><p>首先我们在目录下创建一个空文件夹，然后进入文件夹，在地址栏输入cmd，回车，即可使用命令行进行项目的创建。</p>
+<p><img src="/mockjs%E5%85%A5%E9%97%A8/image-20220605225155091.png" alt="image-20220605225155091"></p>
+<p>在打开的cmd命令窗口中，我们输入<code>npm init</code>，关于项目一些配置暂时先不用管，这里直接一路回车</p>
+<p><img src="/mockjs%E5%85%A5%E9%97%A8/image-20220605225450717.png" alt="image-20220605225450717"></p>
+<p>此时回到刚刚创建的文件夹下，刚刚的cmd窗口先不要关，可以看到生成了一个package.json文件，使用编辑器打开（记事本，sublime皆可），在里面添加如下内容</p>
+<pre class="language-json" data-language="json"><code class="language-json"><span class="token property">"dependencies"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">"mockjs"</span><span class="token operator">:</span> <span class="token string">"^1.1.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"require"</span><span class="token operator">:</span> <span class="token string">"^2.4.20"</span>
+  <span class="token punctuation">&#125;</span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo generate</code></pre>
+<p><img src="/mockjs%E5%85%A5%E9%97%A8/image-20220605230213997.png" alt="image-20220605230213997"></p>
+<p>保存后继续回到cmd窗口，运行<code>npm install</code>导入相关依赖，完成后可以看到项目根目录下创建了node_modules文件，现在环境就搭建完成了，开始使用mockjs。</p>
+<h2 id="hello-mockjs"><a href="#hello-mockjs" class="headerlink" title="hello mockjs"></a>hello mockjs</h2><p>在项目下创建 mock.js，编写如下代码</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> Mock <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"mockjs"</span><span class="token punctuation">)</span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo deploy</code></pre>
+<span class="token keyword">let</span> data <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+    <span class="token string-property property">"data"</span><span class="token operator">:</span> <span class="token string">"hello mockjs!"</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>运行可以看到如下结果</p>
+<p><img src="/mockjs%E5%85%A5%E9%97%A8/image-20220605230629776.png" alt="image-20220605230629776"></p>
+<p>使用cmd进入项目根目录，通过<code>node mock.js</code>命令我们也可以运行mock.js文件，下同</p>
+<p><img src="/mockjs%E5%85%A5%E9%97%A8/image-20220605230804768.png" alt="image-20220605230804768"></p>
+<p>当然，这样的数据肯定不能满足我们的需求</p>
+<h2 id="数据模板"><a href="#数据模板" class="headerlink" title="数据模板"></a>数据模板</h2><h3 id="常用api"><a href="#常用api" class="headerlink" title="常用api"></a>常用api</h3><p><strong>Mock.mock(url, type, data)</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">参数名</th>
+<th align="center">描述</th>
+<th align="center">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">url</td>
+<td align="center">非必填，需要拦截的ajax请求地址</td>
+<td align="center">&#x2F;login, &#x2F;mock&#x2F;getdata</td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td align="center">非必填，请求类型</td>
+<td align="center">post,get</td>
+</tr>
+<tr>
+<td align="center">data</td>
+<td align="center">非必填，返回的响应数据</td>
+<td align="center">对象或字符串</td>
+</tr>
+</tbody></table>
+<h3 id="数据生成"><a href="#数据生成" class="headerlink" title="数据生成"></a>数据生成</h3><p>使用require导入mockjs</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> Mock <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"mockjs"</span><span class="token punctuation">)</span></code></pre>
+
+<h4 id="自定义字符串"><a href="#自定义字符串" class="headerlink" title="自定义字符串"></a>自定义字符串</h4><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// key|规则：value  </span>
+<span class="token keyword">let</span> data1 <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>  <span class="token comment">//生成s个”测试文字“字符串</span>
+    <span class="token string-property property">"data|3"</span><span class="token operator">:</span><span class="token string">"测试文字。"</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data1<span class="token punctuation">)</span>
+<span class="token comment">/**
+* &#123; data: '测试文字。测试文字。测试文字。' &#125;
+*/</span>
+
+<span class="token keyword">let</span> data2 <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token string-property property">"String|1-4"</span><span class="token operator">:</span><span class="token string">"测试文字"</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>   <span class="token comment">// 随机生成1-4个”测试文字“字符串</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data2<span class="token punctuation">)</span>
+<span class="token comment">/**
+* &#123; data: '测试文字。测试文字。' &#125;
+*/</span></code></pre>
+
+<h4 id="随机字符串"><a href="#随机字符串" class="headerlink" title="随机字符串"></a>随机字符串</h4><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+    <span class="token string-property property">"data1"</span><span class="token operator">:</span><span class="token string">"@cword"</span><span class="token punctuation">,</span> <span class="token comment">//单个字符</span>
+    <span class="token string-property property">"data2"</span><span class="token operator">:</span><span class="token string">"@cword(4)"</span><span class="token punctuation">,</span> <span class="token comment">//指定长度字符串</span>
+    <span class="token string-property property">"data23"</span><span class="token operator">:</span><span class="token string">"@cword(4,8)"</span> <span class="token comment">//指定长度范围字符串</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+<span class="token comment">/**
+* &#123; data1: '干', data2: '派管据制', data23: '每调今要行' &#125;
+*/</span></code></pre>
+
+<h4 id="随机省份"><a href="#随机省份" class="headerlink" title="随机省份"></a>随机省份</h4><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>  <span class="token comment">//生成随机省份</span>
+    <span class="token string-property property">"province"</span><span class="token operator">:</span><span class="token string">"@province"</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token comment">//&#123; province: '新疆维吾尔自治区' &#125;</span>
+
+
+<span class="token comment">// 这个示例只返回对应的value，而不是对象，可根据不同需求进行使用，其他模板也可以这样使用</span>
+<span class="token comment">// 下面就不再进行演示了</span>
+<span class="token keyword">let</span> province <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">"@province"</span><span class="token punctuation">)</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>province<span class="token punctuation">)</span> <span class="token comment">//贵州省</span></code></pre>
+
+<h4 id="标题和句子"><a href="#标题和句子" class="headerlink" title="标题和句子"></a>标题和句子</h4><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+    <span class="token string-property property">"data1"</span><span class="token operator">:</span><span class="token string">"@ctitle"</span><span class="token punctuation">,</span> <span class="token comment">//标题</span>
+    <span class="token string-property property">"data2"</span><span class="token operator">:</span><span class="token string">"@csentence"</span><span class="token punctuation">,</span> <span class="token comment">//句子</span>
+    <span class="token string-property property">"data3"</span><span class="token operator">:</span><span class="token string">"@ctitle(10)"</span><span class="token punctuation">,</span> <span class="token comment">//指定长度标题</span>
+    <span class="token string-property property">"data4"</span><span class="token operator">:</span><span class="token string">"@csentence(50)"</span><span class="token punctuation">,</span> <span class="token comment">//指定长度句子</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token comment">// 除了指定长度，指定范围同样可用，语法与前面一致</span></code></pre>
+
+<h4 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h4><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+    <span class="token string-property property">"data1"</span><span class="token operator">:</span><span class="token string">"@cparagraph"</span><span class="token punctuation">,</span> <span class="token comment">//段落</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span></code></pre>
+
+<h4 id="图片地址"><a href="#图片地址" class="headerlink" title="图片地址"></a>图片地址</h4><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+    <span class="token string-property property">"image"</span><span class="token operator">:</span> <span class="token string">"@image('1000x1000', '#ffffff', '#df7bad', 'hello-mockjs')"</span>
+    <span class="token comment">//可选参数 尺寸、背景色、文字颜色、文字内容</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span></code></pre>
+
+<h4 id="随机时间"><a href="#随机时间" class="headerlink" title="随机时间"></a>随机时间</h4><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+    <span class="token string-property property">"time1"</span><span class="token operator">:</span> <span class="token string">'@date()'</span><span class="token punctuation">,</span> <span class="token comment">// 年月日</span>
+    <span class="token string-property property">"time2"</span><span class="token operator">:</span> <span class="token string">'@date(yyyy-MM-dd hh:mm:ss)'</span>  <span class="token comment">//指定格式</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span></code></pre>
+
+<h4 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h4><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+    <span class="token string-property property">"name"</span><span class="token operator">:</span><span class="token string">"@cname"</span><span class="token punctuation">,</span>  <span class="token comment">//姓名</span>
+    <span class="token string-property property">"age"</span><span class="token operator">:</span><span class="token string">"@integer(18,60)"</span><span class="token punctuation">,</span> <span class="token comment">// 指定年龄范围，也可以不指定</span>
+    <span class="token string-property property">"city"</span><span class="token operator">:</span><span class="token string">"@city(true)"</span><span class="token punctuation">,</span> <span class="token comment">//@ city只会生成城市，加上true则加上省，市</span>
+    <span class="token string-property property">"idCard"</span><span class="token operator">:</span><span class="token string">"@id"</span><span class="token punctuation">,</span>  <span class="token comment">//身份证</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span></code></pre>
+
+<h3 id="对象列表"><a href="#对象列表" class="headerlink" title="对象列表"></a>对象列表</h3><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+    <span class="token string-property property">"data|5"</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">&#123;</span>
+        <span class="token string-property property">"key|+1"</span><span class="token operator">:</span> <span class="token number">1</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+<span class="token comment">/**
+* &#123;
+* 	data: [ &#123; key: 1 &#125;, &#123; key: 2 &#125;, &#123; key: 3 &#125;, &#123; key: 4 &#125;, &#123; key: 5 &#125; ]
+* &#125;
+*/</span></code></pre>
+
 
                 
             </div>
@@ -631,7 +776,7 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zhaojiuyi.github.io/2022/05/10/hello-world/">https://zhaojiuyi.github.io/2022/05/10/hello-world/</a>
+                    <a href="https://zhaojiuyi.github.io/2022/06/05/mockjs%E5%85%A5%E9%97%A8/">https://zhaojiuyi.github.io/2022/06/05/mockjs%E5%85%A5%E9%97%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -668,7 +813,15 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/nodejs/">
+                                    <span class="chip bg-color">nodejs</span>
+                                </a>
+                            
+                                <a href="/tags/Mockjs/">
+                                    <span class="chip bg-color">Mockjs</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1108,30 +1261,31 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/05/14/myFirstBlog/">
+                <a href="/2022/06/14/spiderWork/">
                     <div class="card-image">
                         
-                        <img src="/medias/myFirstBlog/blogindex.png" class="responsive-img" alt="基于hexo的博客搭建记录">
                         
-                        <span class="card-title">基于hexo的博客搭建记录</span>
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="scrapy爬取招聘信息">
+                        
+                        <span class="card-title">scrapy爬取招聘信息</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本篇文章介绍如何使用hexo搭建一个专属于自己的博客网站
+                            
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-14
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
-                                    博客搭建
+                            <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
                                 </a>
                             
                             
@@ -1141,12 +1295,16 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/nodejs/">
-                        <span class="chip bg-color">nodejs</span>
+                    <a href="/tags/selenium/">
+                        <span class="chip bg-color">selenium</span>
                     </a>
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/scrapy/">
+                        <span class="chip bg-color">scrapy</span>
+                    </a>
+                    
+                    <a href="/tags/peewee/">
+                        <span class="chip bg-color">peewee</span>
                     </a>
                     
                 </div>
@@ -1157,41 +1315,51 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/10/hello-world/">
+                <a href="/2022/05/28/Vue%E5%85%A5%E9%97%A8/">
                     <div class="card-image">
                         
+                        <img src="/medias/vue/a.png" class="responsive-img" alt="Vue入门">
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Vue入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            本文将对当下一个十分流行的前端框架——Vue.js进行介绍，适合新手入门，理解有误的地方欢迎批评指正
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AF%B4%E6%98%8E/" class="post-category">
-                                    说明
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/vue/">
+                        <span class="chip bg-color">vue</span>
+                    </a>
+                    
+                    <a href="/tags/vue-cli/">
+                        <span class="chip bg-color">vue-cli</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
