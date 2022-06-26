@@ -4,7 +4,7 @@
   z-index: 1000;
   width: 50%;
   height: 100%;
-  background-color: #37474f;
+  background-color: #34445d;
   transition: all 0.5s;
 }
 
@@ -25,20 +25,22 @@
 #loading-box .spinner-box .configure-border-1 {
   position: absolute;
   padding: 3px;
-  width: 115px;
-  height: 115px;
-  background: #ffab91;
-  animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+  width: 130px;
+  height: 130px;
+  background: rgba(255,221,121,.5);
+  animation: configure-clockwise 2s ease-in-out 0s infinite alternate;
+  border-radius: 25% 35% 40% 30%;
 }
 
 #loading-box .spinner-box .configure-border-2 {
   left: -115px;
   padding: 3px;
-  width: 100px;
-  height: 100px;
-  background: rgb(63, 249, 220);
+  width: 130px;
+  height: 130px;
+  background: rgba(255,221,121,.5);
   transform: rotate(45deg);
-  animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+  animation: configure-xclockwise 2s ease-in-out 0s infinite alternate;
+  border-radius: 30% 40% 35% 25%;
 }
 
 #loading-box .spinner-box .loading-word {
@@ -47,11 +49,11 @@
   font-size: 0.8rem;
 }
 
-#loading-box .spinner-box .configure-core {
+/*#loading-box .spinner-box .configure-core {
   width: 100%;
   height: 100%;
   background-color: #37474f;
-}
+}*/
 
 div.loaded div.loading-left-bg {
   transform: translate(-100%, 0);
@@ -79,32 +81,32 @@ div.loaded div.spinner-box {
   }
 
   75% {
-    transform: rotate(270deg);
+    transform: rotate(90deg);
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
 }
 
 @keyframes configure-xclockwise {
   0% {
-    transform: rotate(45deg);
+    transform: rotate(0deg);
   }
 
   25% {
-    transform: rotate(-45deg);
+    transform: rotate(-90deg);
   }
 
   50% {
-    transform: rotate(-135deg);
+    transform: rotate(-180deg);
   }
 
   75% {
-    transform: rotate(-225deg);
+    transform: rotate(-90deg);
   }
 
   100% {
-    transform: rotate(-315deg);
+    transform: rotate(-0deg);
   }
 }
