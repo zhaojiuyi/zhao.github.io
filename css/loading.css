@@ -28,7 +28,7 @@
   width: 130px;
   height: 130px;
   background: rgba(255,221,121,.5);
-  animation: linear 2s ease-in-out 0s infinite alternate;
+  animation: configure-xclockwise 2s linear 0s infinite alternate;
   border-radius: 25% 35% 40% 30%;
 }
 
@@ -39,7 +39,7 @@
   height: 130px;
   background: rgba(255,221,121,.5);
   transform: rotate(45deg);
-  animation: linear 2s ease-in-out 0s infinite alternate;
+  animation: configure-xclockwise 2s linear 0s infinite alternate;
   border-radius: 30% 40% 35% 25%;
 }
 
