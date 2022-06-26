@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="mockjs入门, 太阳当空丶赵">
+    <meta name="keywords" content="mockjs基本使用, 太阳当空丶赵">
     <meta name="description" content="本篇文章介绍在后端接口尚未开发完成时，如何使用mockjs进行后端接口数据的模拟">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>mockjs入门 | 燚</title>
+    <title>mockjs基本使用 | 燚</title>
     <link rel="stylesheet" type="text/css" href="/css/loading.css">
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -421,7 +421,7 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">mockjs入门</h1>
+                    <h1 class="description center-align post-title">mockjs基本使用</h1>
                 </div>
             </div>
         </div>
@@ -575,14 +575,14 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -750,6 +750,38 @@ console<span class="token punctuation">.</span><span class="token function">log<
 * &#125;
 */</span></code></pre>
 
+<h2 id="在Vue项目中使用"><a href="#在Vue项目中使用" class="headerlink" title="在Vue项目中使用"></a>在Vue项目中使用</h2><p>打开自己的Vue项目，在src目录下创建mock文件夹，然后在文件夹下创建mock.js文件，用于编写模拟数据的代码。</p>
+<p>添加如下代码</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> Mock <span class="token keyword">from</span> <span class="token string">'mockjs'</span>
+ <span class="token comment">//mock</span>
+<span class="token keyword">let</span> data <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">"@id()"</span><span class="token punctuation">,</span> <span class="token comment">// 得到随机的id,对象</span>
+  <span class="token literal-property property">username</span><span class="token operator">:</span> <span class="token string">"@cname()"</span><span class="token punctuation">,</span> <span class="token comment">// 随机生成中文名字</span>
+  <span class="token literal-property property">date</span><span class="token operator">:</span> <span class="token string">"@date()"</span><span class="token punctuation">,</span> <span class="token comment">// 随机生成日期</span>
+  <span class="token literal-property property">avatar</span><span class="token operator">:</span> <span class="token string">"@image('200x100', '#00405d', '#FFF', 'Mock.js')"</span><span class="token punctuation">,</span>
+  <span class="token comment">// => "http://dummyimage.com/200x100/00405d/FFF&amp;text=Mock.js"</span>
+  <span class="token comment">// description: "@paragraph()",// 描述</span>
+  <span class="token literal-property property">ip</span><span class="token operator">:</span> <span class="token string">"@ip()"</span><span class="token punctuation">,</span><span class="token comment">// IP地址</span>
+  <span class="token literal-property property">email</span><span class="token operator">:</span> <span class="token string">"@email()"</span> <span class="token comment">// email</span>
+
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">"http://localhost:8080/login"</span><span class="token punctuation">,</span> <span class="token string">'post'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>  <span class="token comment">//拦截请求，返回模拟的响应数据</span>
+  <span class="token string-property property">"token"</span><span class="token operator">:</span> <span class="token string">"12asdf41asfasf2123asf4312safasdff34"</span><span class="token punctuation">,</span>
+  <span class="token string-property property">"data"</span> <span class="token operator">:</span> data
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span></code></pre>
+
+<p>其中，<code>http://localhost:8080/login</code>是我们要拦截的接口地址，<code>post</code>表示需要拦截的请求方式 。</p>
+<p>然后在项目的main.js文件导入mock.js文件</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">'@/mock/index.js/'</span></code></pre>
+
+<p>然后进行测试，在页面中调用接口</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">axios<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">"http://localhost:8080/login"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span></code></pre>
+
+<p>在浏览器打开调试工具</p>
+<p><img src="/2022/06/05/mockjs%E5%85%A5%E9%97%A8/image-20220626214643702.png" alt="image-20220626214643702"></p>
+<p>成功！！！</p>
 
                 
             </div>
