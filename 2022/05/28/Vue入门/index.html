@@ -575,14 +575,14 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5k
+                    5.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    21 分
+                    23 分
                 </div>
                 
 
@@ -1166,6 +1166,56 @@ npm install -g @vue&#x2F;cli 此方法安装的是最新版</code></pre>
 <p><img src="/2022/05/28/Vue%E5%85%A5%E9%97%A8/image-20220529171013643.png" alt="image-20220529171013643"></p>
 <p>浏览器地址栏输入该地址，看到如下界面，一个使用脚手架搭建的Vue.js项目就搭建完成了</p>
 <p><img src="/2022/05/28/Vue%E5%85%A5%E9%97%A8/image-20220529171144928.png" alt="image-20220529171144928"></p>
+<p>打开项目目录的src文件夹，可以看到有一个<code>APP.vue</code>文件，这是一个单文件组件下面会提到。</p>
+<p>先看一下项目结构</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">├── build --------------------------------- 项目构建的相关配置文件，配置参数
+├── config ---------------------------------- 配置目录，包括IP、端口等。
+├── node_modules ---------------------------- <span class="token function">npm</span> 加载的项目依赖模块
+├── src ------------------------------------- 开发的根目录。
+│   ├── assets ------------------------------ 静态文件夹，放置一些图片、logo，css、js文件等
+│   ├── components -------------------------- 组件目录，存放组件文件。
+│   ├── main.js ----------------------------- 项目js文件，vue实例就是在这里面创建的。
+│   ├── App.vue ----------------------------- 项目入口组件，所有的页面都在这个组件进行渲染。
+│   ├── router ------------------------------ 路由
+├── static ---------------------------- 静态资源目录，如图片、字体等。
+├── index.html ------------------------------ 首页入口文件，用于vue实例的挂载。
+├── package.json ---------------------------- 项目依赖文件。 
+├──  .README.md------------------------------- 项目的说明文档，markdown 格式</code></pre>
+
+<h3 id="单文件组件"><a href="#单文件组件" class="headerlink" title="单文件组件"></a>单文件组件</h3><p>在Vue项目中，除了使用component来定义组件，还可以使用单文件组件，使用单文件组件能使得组件开发更加方便快捷。</p>
+<p>原本定义组件的方式有以下缺点</p>
+<ul>
+<li><strong>全局定义 (Global definitions)</strong> 强制要求每个 component 中的命名不得重复</li>
+<li><strong>字符串模板 (String templates)</strong> 缺乏语法高亮，在 HTML 有多行的时候，需要用到丑陋的 <code>\</code></li>
+<li><strong>不支持 CSS (No CSS support)</strong> 意味着当 HTML 和 JavaScript 组件化时，CSS 明显被遗漏</li>
+<li><strong>没有构建步骤 (No build step)</strong> 限制只能使用 HTML 和 ES5 JavaScript，而不能使用预处理器，如 Pug (formerly Jade) 和 Babel</li>
+</ul>
+<p>使用拓展名为<code>*.vue</code>的单文件组件为以上问题提供了解决方案。</p>
+<p>一个<code>*.vue</code>模板可分为<code>template</code>,<code>script</code>,<code>style</code>三个部分，可以理解为html、js、css</p>
+<p>例如，这是一个名为<code>index.vue</code>的组件实例</p>
+<pre class="language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;&#123;&#123;title&#125;&#125;&lt;&#x2F;h1&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;template&gt;
+
+&lt;script&gt;
+export default &#123;
+  name: &quot;index&quot;,
+  data()&#123;
+      return &#123;
+          title: &#39;hello world!&#39;
+      &#125;
+  &#125;
+&#125;
+&lt;&#x2F;script&gt;
+
+&lt;style scoped&gt;
+
+&lt;&#x2F;style&gt;</code></pre>
+
+
+
 
                 
             </div>
