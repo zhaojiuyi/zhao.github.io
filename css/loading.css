@@ -72,20 +72,8 @@ div.loaded div.spinner-box {
     transform: rotate(0);
   }
 
-  25% {
-    transform: rotate(90deg);
-  }
-
-  50% {
-    transform: rotate(180deg);
-  }
-
-  75% {
-    transform: rotate(90deg);
-  }
-
   100% {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -94,19 +82,7 @@ div.loaded div.spinner-box {
     transform: rotate(0deg);
   }
 
-  25% {
-    transform: rotate(-90deg);
-  }
-
-  50% {
-    transform: rotate(-180deg);
-  }
-
-  75% {
-    transform: rotate(-90deg);
-  }
-
   100% {
-    transform: rotate(-0deg);
+    transform: rotate(-360deg);
   }
 }
