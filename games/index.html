@@ -5,8 +5,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="基于hexo的博客搭建记录, 太阳当空丶赵">
-    <meta name="description" content="本篇文章介绍如何使用hexo搭建一个专属于自己的博客网站">
+    <meta name="keywords" content="太阳当空丶赵">
+    <meta name="description" content="燚">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>基于hexo的博客搭建记录 | 燚</title>
+    <title>燚</title>
     <link rel="stylesheet" type="text/css" href="/css/loading.css">
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -436,12 +436,12 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myFirstBlog/blogindex.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">基于hexo的博客搭建记录</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -555,29 +555,12 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/nodejs/">
-                                <span class="chip bg-color">nodejs</span>
-                            </a>
-                        
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
-                                博客搭建
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -586,7 +569,7 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-14
+                    2022-07-25
                 </div>
                 
 
@@ -595,14 +578,14 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    9
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    1 分
                 </div>
                 
 
@@ -620,100 +603,10 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本文将使用基于node.js的一个快速、简介且高效的博客框架————hexo，完成一个博客网站的搭建，由于hexo是建立在node之上，建议先在本地完成node.js环境的配置。</p>
-<h5 id="相关链接："><a href="#相关链接：" class="headerlink" title="相关链接："></a>相关链接：</h5><p>hexo官方文档：<a target="_blank" rel="noopener" href="https://hexo.bootcss.com/docs/">https://hexo.bootcss.com/docs/</a></p>
-<p>hexo主题配置： <a target="_blank" rel="noopener" href="https://easyhexo.com/2-Theme-use-and-config/">https://easyhexo.com/2-Theme-use-and-config/</a></p>
-<h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建<br/></h2><h3 id="一，项目初始化"><a href="#一，项目初始化" class="headerlink" title="一，项目初始化"></a>一，项目初始化</h3><p>1、使用npm下载hexo</p>
-<pre class="language-none"><code class="language-none">npm install -g hexo-cli</code></pre>
+                <pre class="language-none"><code class="language-none">title: games
+date: 2022-07-25 16:24:51</code></pre>
 
-<p>2、创建一个项目文件夹(目录随意)，名称随意，我这里以hexo为例</p>
-<pre class="language-none"><code class="language-none">mkdir hexo &#x2F;&#x2F; 创建一个名为hexo的文件夹
-cd hexo &#x2F;&#x2F;进入hexo目录下
-hexo init &#x2F;&#x2F;初始化，等待下载完成</code></pre>
-
-<p><img src="/2022/05/14/myFirstBlog/image-20220515140323539.png" alt="image-20220515140323539"></p>
-<p>当看到这样的字样则表示项目初始化成功！！！</p>
-<p>3、将项目运行起来，使用控制台进入当前目录，win+r，输入cmd，然后cd 到当前目录即可，不过在windows下需要注意的是，如果要切换到其他盘，如D ,E盘，则需要先输入d: 或 e:  。</p>
-<pre class="language-none"><code class="language-none">npm install &#x2F;&#x2F;首先导入相关的依赖
-hexo g  
-hexo s</code></pre>
-
-<p>此时可以看到<img src="/2022/05/14/myFirstBlog/hexo-s.png" alt="hexo-s"></p>
-<p>在浏览器输入localhost:4000即可打开博客页面，如下图所示</p>
-<p><img src="/2022/05/14/myFirstBlog/image.png" alt="hexo-s"></p>
-<p>这样，博客搭建的第一步就完成了，顺便介绍一下hexo常用的几个命令</p>
-<ul>
-<li>hexo clean		清空当前编译好的静态文件以及缓存文件，可以理解为将博客网页清空</li>
-<li>hexo generate  生成静态文件，也就是生成博客页面 ，可以简写为 hexo g</li>
-<li>hexo server       从本地服务器打开博客，可以简写为hexo s</li>
-<li>hexo deploy      将博客进行部署，这个暂时不进行描述</li>
-<li>hexo new page pagename 新建一个页面</li>
-<li>hexo new blogname    新建一篇博客，也就是创建一个markdown文件，存放在项目根目录下的source&#x2F;_posts下</li>
-</ul>
-<p>然后看一下项目的基本目录结构</p>
-<pre class="language-none"><code class="language-none">node_module   --项目依赖文件夹
-public        --生成的静态网页目录
-themes        --主题文件夹，下载的主题放到这里面
-source        --与我们接触最多的一个文件夹，里面放着各种页面，文章和图片
-	-_posts   --写的博客就放在这里面
-_config.yml   --项目配置文件</code></pre>
-
-<br/>
-
-<h3 id="二，博客界面美化"><a href="#二，博客界面美化" class="headerlink" title="二，博客界面美化"></a>二，博客界面美化</h3><p>hexo官网给我们提供了很多免费的主题，<a target="_blank" rel="noopener" href='https://hexo.bootcss.com/themes/'>传送门</a>，可以在这里寻找自己喜欢的主题，用git克隆到themes目录后，在_config.yml配置文件进行切换，如图</p>
-<p><img src="/2022/05/14/myFirstBlog/themes.png" alt="themes"></p>
-<p>这里我使用的是matery主题，是把他克隆到项目根目录下的themes主题目录下</p>
-<pre class="language-none"><code class="language-none">git clone https:&#x2F;&#x2F;github.com&#x2F;blinkfox&#x2F;hexo-theme-matery.git themes&#x2F;hexo-theme-matery</code></pre>
-
-<p>然后根据上图修改配置文件即可，修改完成后记得重新生成静态文件hexo g，然后重新运行hexo s</p>
-<p>查看效果</p>
-<p><img src="/2022/05/14/myFirstBlog/myblog.png" alt="myblog"></p>
-<p>关于博客主题的相关配置，在themes下的hexo-theme-matery下有一个_config.yml的配置文件，里面都有注释，可以进行相关功能的添加</p>
-<p>关于标签、分类、关于等界面点击后没有页面的情况，我们查看hexo-theme-matery文档</p>
-<p><a target="_blank" rel="noopener" href="https://easyhexo.com/2-Theme-use-and-config/2-14-hexo-theme-matery/">https://easyhexo.com/2-Theme-use-and-config/2-14-hexo-theme-matery/</a></p>
-<p><img src="/2022/05/14/myFirstBlog/image-20220515224748462.png" alt="image-20220515224748462"></p>
-<p>根据官方文档进行相关界面的配置即可，这里以categories为例</p>
-<pre class="language-none"><code class="language-none">hexo new page &quot;categories&quot;</code></pre>
-
-<p>然后在source目录下找到categories&#x2F;index.md，修改如下，即可，</p>
-<pre class="language-none"><code class="language-none">---
-title: categories
-date: 2018-09-30 17:25:30  &#x2F;&#x2F;时间可不做修改
-type: &quot;categories&quot;
-layout: &quot;categories&quot;
----</code></pre>
-
-<p>其他页面也是一样的方法，配置完成后重新打包静态文件，hexo g然后运行就可以了</p>
-<h2 id="加载速度优化"><a href="#加载速度优化" class="headerlink" title="加载速度优化"></a>加载速度优化</h2><p>在使用过程中发现，有时候会出现加载缓慢的问题，我们打开控制台，点击网络，这时候发现一个名叫typed.js的文件请求失败了，怀疑是这个文件一直请求不成功，导致网页一直阻塞在加载状态。</p>
-<p><img src="/2022/05/14/myFirstBlog/image-20220517171949910.png" alt="image-20220517171949910"></p>
-<p>这是一个用来实现首页打字效果的js插件，我们在主题目录下（也就是hexo-theme-matery文件夹下）的layout\_partial下找到一个bg-cover-content.ejs的文件，打开可看到这里是使用的cdn引入</p>
-<p><img src="/2022/05/14/myFirstBlog/image-20220517172408357.png" alt="image-20220517172408357"></p>
-<p>我们可以直接把这个文件下载到本地，这样就不用每次都需要从网上去下载资源，，尤其在网络比较慢的情况下，会让博客的加载一直处于阻塞状态。</p>
-<p>找不到下载地址的小伙伴可以使用我这个地址</p>
-<pre class="language-none"><code class="language-none">https:&#x2F;&#x2F;zhaojiuyi.github.io&#x2F;medias&#x2F;js&#x2F;typed.min.js</code></pre>
-
-<p>打开后是这样的一个网页</p>
-<p><img src="/2022/05/14/myFirstBlog/image-20220518115528520.png" alt="image-20220518115528520"></p>
-<p>全部选中后在主题目录hexo-theme-matery下的source\js下创建一个type-min.js文件，将内容粘贴进去，然后保存，最后在hexo-theme-matery\layout\_partial下的bg-cover-content.ejs下导入js文件</p>
-<pre class="language-none"><code class="language-none">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;typed.min.js&quot;&gt;&lt;&#x2F;script&gt;</code></pre>
-
-<p><img src="/2022/05/14/myFirstBlog/image-20220518120012775.png" alt="image-20220518120012775"></p>
-<p>图片中删除的部分路径可能不太一样，只用看最后都是type.js或者type.min.js就可以了</p>
-<p>现在重新打包静态文件，可以看到博客启动速度变快了。</p>
-<h2 id="来个开箱即用"><a href="#来个开箱即用" class="headerlink" title="来个开箱即用"></a>来个开箱即用</h2><p>使用如下命令，直接克隆博主搭建好的博客到本地</p>
-<pre class="language-none"><code class="language-none">git clone https:&#x2F;&#x2F;github.com&#x2F;zhaojiuyi&#x2F;hexo-matery.git</code></pre>
-
-<p>使用hexo g生成静态文件，然后hexo s运行后在浏览器输入localhost:4000打开，功能虽然不多，也还能满足基本需求。关于部署的问题网上教程很多，暂时先不做叙述了。</p>
-<pre class="language-none"><code class="language-none">npm install
-hexo clean
-hexo g
-hexo s</code></pre>
-
-<p>最后推荐几篇博客</p>
-<p>hexo+github博客搭建和部署，个人认为十分详细：,<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_58608526/article/details/124652412">https://blog.csdn.net/qq_58608526/article/details/124652412</a></p>
-<p>页面加载动画：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43662760/article/details/122311217">https://blog.csdn.net/weixin_43662760/article/details/122311217</a></p>
-<p>网页昼夜切换的效果：<a target="_blank" rel="noopener" href="https://dreamruins.gitee.io/tutorials/1121281946.html#vcomments">https://dreamruins.gitee.io/tutorials/1121281946.html#vcomments</a></p>
-
+<iframe src='http://www.zhaojiuyi.top/mygame' style='width:100%;height:100vh'></iframe>
                 
             </div>
             <hr/>
@@ -739,7 +632,7 @@ hexo s</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zhaojiuyi.github.io/2022/05/14/myFirstBlog/">https://zhaojiuyi.github.io/2022/05/14/myFirstBlog/</a>
+                    <a href="https://zhaojiuyi.github.io/games/index.html">https://zhaojiuyi.github.io/games/index.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -776,15 +669,7 @@ hexo s</code></pre>
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/nodejs/">
-                                    <span class="chip bg-color">nodejs</span>
-                                </a>
-                            
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1220,81 +1105,18 @@ hexo s</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2022/05/21/spider-notebook/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/spider_nodebook/1.jpg" class="responsive-img" alt="爬虫笔记">
-                        
-                        <span class="card-title">爬虫笔记</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            爬虫入门笔记
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-21
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/requests/">
-                        <span class="chip bg-color">requests</span>
-                    </a>
-                    
-                    <a href="/tags/BeautifulSoup/">
-                        <span class="chip bg-color">BeautifulSoup</span>
-                    </a>
-                    
-                    <a href="/tags/cookie/">
-                        <span class="chip bg-color">cookie</span>
-                    </a>
-                    
-                    <a href="/tags/session/">
-                        <span class="chip bg-color">session</span>
-                    </a>
-                    
-                    <a href="/tags/selenium/">
-                        <span class="chip bg-color">selenium</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2022/05/10/hello-world/">
+                <a href="/games/index.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1305,20 +1127,55 @@ hexo s</code></pre>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AF%B4%E6%98%8E/" class="post-category">
-                                    说明
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            太阳当空丶赵
                             
                         </span>
                     </div>
                 </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/games/index.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            太阳当空丶赵
+                            
+                        </span>
+                    </div>
+                </div>
+
                 
             </div>
         </div>
