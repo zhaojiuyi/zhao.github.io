@@ -679,7 +679,7 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
 <p><code>注：</code><span style="color:#f74e1e">接下来的所有代码都写在类型为“babel”的script标签中(type&#x3D;”text&#x2F;babel”)</span></p>
 <p>在这个例子中，先准备了一个id为test的一个容器，然后使用jsx语法创建了一个虚拟DOM，也就是<code>h1</code>，最后使用ReactDOM的render方法将虚拟DOM进行渲染。</p>
 <p>最后在浏览器打开</p>
-<p><img src="/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220728220010568.png" alt="image-20220728220010568"></p>
+<p><img src="/2022/07/28/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220728220010568.png" alt="image-20220728220010568"></p>
 <p>看到如下内容，第一个React程序就写完了。</p>
 <h2 id="创建虚拟DOM的方式"><a href="#创建虚拟DOM的方式" class="headerlink" title="创建虚拟DOM的方式"></a>创建虚拟DOM的方式</h2><h3 id="使用jsx进行创建"><a href="#使用jsx进行创建" class="headerlink" title="使用jsx进行创建"></a>使用jsx进行创建</h3><p><code>jsx</code>支持在js代码中嵌入标签，可以让编码人员更加简单的创建虚拟DOM</p>
 <pre class="language-jsx" data-language="jsx"><code class="language-jsx"><span class="token comment">// 创建虚拟dom</span>
@@ -700,7 +700,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 <span class="token comment">// 渲染虚拟dom</span>
 ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token constant">VDOM</span><span class="token punctuation">,</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 
-<p><img src="/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220728221706898.png" alt="image-20220728221706898"></p>
+<p><img src="/2022/07/28/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220728221706898.png" alt="image-20220728221706898"></p>
 <p>其实，<code>jsx</code>创建的虚拟DOM最终编译后得到代码和js方式创建的是一样的，但是<code>jsx</code>更加简单，而且当面多多重标签深度嵌套的时候，代码会显得很冗余，所以一般情况下建议使用<code>jsx</code>。</p>
 <h3 id="虚拟DOM与真实DOM的区别"><a href="#虚拟DOM与真实DOM的区别" class="headerlink" title="虚拟DOM与真实DOM的区别"></a>虚拟DOM与真实DOM的区别</h3><p>先编辑以下代码，在浏览器打开控制台，查看打印的结果</p>
 <pre class="language-jsx" data-language="jsx"><code class="language-jsx"><span class="token comment">// 创建虚拟dom</span>
@@ -714,7 +714,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"真实dom"</span><span class="token punctuation">)</span>
 console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span><span class="token constant">TDOM</span><span class="token punctuation">)</span></code></pre>
 
-<p><img src="/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220728222835904.png" alt="image-20220728222835904"></p>
+<p><img src="/2022/07/28/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220728222835904.png" alt="image-20220728222835904"></p>
 <p>总结一下</p>
 <ul>
 <li><p>虚拟dom本质就是Object类型的js对象（一般对象）</p>
@@ -792,7 +792,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 <p>为什么在<code>&#123;&#125;</code>中没有写for循环？因为在<code>&#123;&#125;</code>中只能写表达式，不能写语句，for循环就是一个语句。</p>
 <p>使用map取出数组中的元素，返回一个被<code>li</code>标签包含的元素集合。这里的<code>key</code>则是该DOM元素的唯一标识，不应该重复，在react渲染DOM时，会将<code>新的虚拟DOM</code>的<code>key</code>与<code>旧的虚拟DOM</code>的<code>key</code>进行对比，保留已经存在的节点，并添加新的节点。也就是说，如果在上面的列表中再添加一个元素，react只会渲染新添加的这个元素，其他的保持不变，通过复用节点的方式提高效率。如果没有这个<code>key</code>，则无法判断两个节点是否相同，只能全部重新渲染，如果实在节点较多的情况下，容易使得浏览器卡顿。</p>
 <p>最后看一下效果</p>
-<p><img src="/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220729075101204.png" alt="image-20220729075101204"></p>
+<p><img src="/2022/07/28/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220729075101204.png" alt="image-20220729075101204"></p>
 <h2 id="组件的定义"><a href="#组件的定义" class="headerlink" title="组件的定义"></a>组件的定义</h2><h3 id="函数式组件"><a href="#函数式组件" class="headerlink" title="函数式组件"></a>函数式组件</h3><p>创建函数式组件 函数名就是类名，例如：</p>
 <pre class="language-jsx" data-language="jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">MyComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
     <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span><span class="token plain-text">函数定义组件（适用于 "简单组件" 定义）</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
@@ -912,7 +912,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 <p>在点击事件中的<code>this.changeWeather</code>，this指向当前类，是直接调用类方法，类中的方法默认开启了局部的严格模式，所以changeWeather中的this为undefind（如果不开启严格模式，则指向window）所以使用<code>this.state</code>和<code>this.setState</code>时，会提示undefind。所以我们需要修改this的指向，可以使用bind方法，bind方法会返回一个新的函数，并将修改该函数的作用域。</p>
 <p>在构造器中写入<code>this.changeWeather = this.changeWeather.bind(this) </code>，构造器中的this指向的是当前实例，通过传入当前实例，调用bind方法返回一个新的<code>changeWeather</code>并挂载在实例上，该方法的this指向当前实例，然后我们就能在<code>changeWeather</code>这个方法中修改state。</p>
 <p>可以在构造器中打印一下this，结合上面内容进行分析</p>
-<p><img src="/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220729090104615.png" alt="image-20220729090104615"></p>
+<p><img src="/2022/07/28/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220729090104615.png" alt="image-20220729090104615"></p>
 <p><strong>简写一下</strong></p>
 <p>可以弃用构造函数，直接将state添加到类属性中</p>
 <p>然后类方法使用箭头函数:</p>
@@ -962,7 +962,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 <p>可以直接在标签内写自定义属性，写在组件标签内的属性会被添加到实例的props属性中,也可以使用展开运算符<code>&#123;...person&#125;</code></p>
 <p>这里的 展开语法与ES6有些不同，ES6中的展开运算符不允许展开对象，React组件标签内允许，其他地方不允许</p>
 <p>打印一下当前组件实例</p>
-<p><img src="/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220729113657886.png" alt="image-20220729113657886"></p>
+<p><img src="/2022/07/28/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220729113657886.png" alt="image-20220729113657886"></p>
 <p>可以看到我们添加的属性都被添加到props中了</p>
 <p>然后就可以在组件中使用props里面的数据</p>
 <h4 id="props限制"><a href="#props限制" class="headerlink" title="props限制"></a>props限制</h4><p>有时候我们希望对props的数据进行限制，例如是否必传，默认值、数据类型等</p>
@@ -1108,7 +1108,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span></code></pre>
 
-<p><img src="/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220729131019005.png" alt="image-20220729131019005"></p>
+<p><img src="/2022/07/28/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220729131019005.png" alt="image-20220729131019005"></p>
 <p>字符串形式的ref虽然方便，但是效率并不高，所以官方不建议使用，并可能会在未来的版本被移除</p>
 <h4 id="回调函数形式的ref"><a href="#回调函数形式的ref" class="headerlink" title="回调函数形式的ref"></a>回调函数形式的ref</h4><p>React 还支持另一种设置 refs 的方式，称为“回调 refs”。它能助你更精细地控制何时 refs 被设置和解除。</p>
 <p>内联函数语法：ref&#x3D;{ currentNode &#x3D;&gt; this.input1 &#x3D; currentNode } —— 把ref当前所处的节点挂载在实例自身上，并取名为input1</p>
@@ -1337,7 +1337,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 <p>这时候我们希望只在组件挂载时创建一个定时器，这时候就会用到我们的生命周期钩子</p>
 <p><code>componentDidMount</code>表示组件挂载完成时，也就是说组件挂载完成后会调用这个函数<br><code>componentWillUnmount</code>表示组件即将销毁，也就是说组件销毁之前会触发这个函数</p>
 <p>用一张图片表示组件的生命周期</p>
-<p><img src="/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt="生命周期"></p>
+<p><img src="/2022/07/28/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt="生命周期"></p>
 <p>用一个示例来打印表示组件的生命周期，可以打开控制台查看</p>
 <pre class="language-jsx" data-language="jsx"><code class="language-jsx"><span class="token keyword">class</span> <span class="token class-name">Count</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">&#123;</span>
 
@@ -1450,6 +1450,9 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Count</span></span><span class="token punctuation">/></span></span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"test"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">A</span></span><span class="token punctuation">/></span></span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"test1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 
+<p>打开控制台，点击按钮，查看对应打印的生命周期</p>
+<p><img src="/2022/07/28/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/image-20220729143900258.png" alt="image-20220729143900258"></p>
+<p><strong>总结一下：</strong></p>
 <p><strong>组件挂载时</strong>，会首先触发<code>constructor</code>构造器，然后触发<code>componentWillMount</code>钩子（组件即将挂载，也就是挂载前，此时还未进行挂载），然后执行<code>render</code>方法返回虚拟dom，将虚拟dom转换为真实dom后完成挂载，进入<code>componentDidMount</code>钩子（完成挂载）；</p>
 <p><strong>组件更新时</strong>，如果是使用<code>setState</code>方法进行状态更新，则进入<code>shouldComponentUpdate</code>钩子，判断是否更新状态，就相当于一个开关，如果为false,则不会触发接下来的钩子，用户没有自定义<code>shouldComponentUpdate</code>钩子时，默认为true，否则更具自定义规则进行，随后进入<code>componentWillUpdate</code>钩子（组件即将更新，也就是更新之前），再然后调用<code>render</code>方法，更新组件状态，然后进入<code>componentDidUpdate</code>钩子（更新完成）；如果使用<code>forceUpdate</code>方法强制更新组件，则会跳过<code>shouldComponentUpdate</code>钩子（不判断是否更新），直接进入<code>componentWillUpdate</code>，然后调用<code>render</code>，最后<code>componentDidUpdate</code>（更新完成）;</p>
 <p><strong>如果是父组件触发<code>render</code>方法</strong>，则子组件将触发<code>componentWillReceiveProps</code>钩子（即将向子组件传递props，也就是即将向子组件传递参数），然后就和正常更新组件状态的钩子一样，到达<code>shouldComponentUpdate =&gt; componentWillUpdate =&gt; render =&gt; componentDidUpdate</code>;</p>
