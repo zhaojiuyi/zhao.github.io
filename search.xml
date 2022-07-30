@@ -76,9 +76,9 @@
       
         <tags>
             
-            <tag> scrapy </tag>
-            
             <tag> selenium </tag>
+            
+            <tag> scrapy </tag>
             
             <tag> peewee </tag>
             
@@ -159,8 +159,6 @@
       
         <tags>
             
-            <tag> selenium </tag>
-            
             <tag> requests </tag>
             
             <tag> BeautifulSoup </tag>
@@ -168,6 +166,8 @@
             <tag> cookie </tag>
             
             <tag> session </tag>
+            
+            <tag> selenium </tag>
             
         </tags>
       

@@ -574,6 +574,11 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
                 
 
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-07-28
+                </div>
+                
 
                 
                 <div class="info-break-policy">
@@ -590,6 +595,11 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
                 
 
                 
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
@@ -1227,7 +1237,7 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
             + '来源: 燚<br />'
             + '作者: 太阳当空丶赵<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+            + '哈哈哈，随便抄，报错了可别找我😊。';
 
         selection.selectAllChildren(newdiv);
         window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
@@ -1424,6 +1434,9 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">29.7k</span>
+            
             
             
                 
@@ -1480,7 +1493,7 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
 
 
 
-    <a href="" class="tooltipped" target="_blank" data-tooltip="访问我的CSDN" data-position="top" data-delay="50">
+    <a href="https://blog.csdn.net/zhaojiuyi" class="tooltipped" target="_blank" data-tooltip="访问我的CSDN" data-position="top" data-delay="50">
         <i class="fab fa-CSDN">c</i>
     </a>
 
@@ -1619,17 +1632,17 @@ $(function () {
 
 
     <!-- 雪花特效 -->
-    
-
-    <!-- 鼠标星星特效 -->
      
         <script type="text/javascript">
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
             }
         </script>
+    
+
+    <!-- 鼠标星星特效 -->
     
     <!-- 动态标题 -->
     <script type="text/javascript"> var OriginTitile = document.title, st; 
