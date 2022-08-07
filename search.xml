@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>vue全家桶</title>
+      <link href="/2022/08/06/vue%E5%85%A8%E5%AE%B6%E6%A1%B6/"/>
+      <url>/2022/08/06/vue%E5%85%A8%E5%AE%B6%E6%A1%B6/</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><code>vue全家桶</code>指的是我们在使用vue框架开发一个完整的中大型单页面应用项目时所必须的插件或框架，其主要包括：</p><p><strong>vue-cli:</strong>VueCLI是官方提供的一个脚手架，能够快速搭建起一个单页面应用</p><p><strong>vue-router:</strong>Vue Router 是 <a href="http://v3.vuejs.org/">Vue.js</a> 的官方路由。它与 Vue.js 核心深度集成，让用 Vue.js 构建单页应用变得轻而易举</p><p><strong>vuex:</strong>Vuex 是一个专为 Vue.js 应用程序开发的<strong>状态管理模式 + 库</strong>。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p><p><strong>axios:</strong>Axios 是一个基于 <em><a href="https://javascript.info/promise-basics">promise</a></em> 网络请求库，作用于<a href="https://nodejs.org/"><code>node.js</code></a> 和浏览器中</p><h2 id="一、项目搭建"><a href="#一、项目搭建" class="headerlink" title="一、项目搭建"></a>一、项目搭建</h2><p>首先使用npm全局安装<code>vue-cli</code></p><pre class="language-none"><code class="language-none">npm install -g vue-cli &#x2F;&#x2F;此方法安装的是2.x版本npm install -g @vue&#x2F;cli 此方法安装的是最新版</code></pre><p>安装完成后在控制台下输入 <code>vue</code>命令，如图所示说明安装成功</p><p><img src="/vue%E5%85%A8%E5%AE%B6%E6%A1%B6/image-20220806170220143.png" alt="image-20220806170220143"></p><p>接下来使用脚手架创建项目</p><p>控制台中输入 <code>vue init webpack your-project-name</code></p><p>这里使用webpack完成项目打包，your-project-name为项目名称</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+            <tag> vue-cli </tag>
+            
+            <tag> vue-router </tag>
+            
+            <tag> vuex </tag>
+            
+            <tag> axios </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>react学习笔记（1）</title>
       <link href="/2022/07/28/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/"/>
       <url>/2022/07/28/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/</url>
@@ -76,9 +109,9 @@
       
         <tags>
             
-            <tag> selenium </tag>
-            
             <tag> scrapy </tag>
+            
+            <tag> selenium </tag>
             
             <tag> peewee </tag>
             
@@ -159,6 +192,8 @@
       
         <tags>
             
+            <tag> selenium </tag>
+            
             <tag> requests </tag>
             
             <tag> BeautifulSoup </tag>
@@ -166,8 +201,6 @@
             <tag> cookie </tag>
             
             <tag> session </tag>
-            
-            <tag> selenium </tag>
             
         </tags>
       
