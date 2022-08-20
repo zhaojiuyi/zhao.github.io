@@ -614,21 +614,21 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-08
+                    2022-08-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    9 分
                 </div>
                 
 
@@ -721,11 +721,11 @@ export default &#123;
 <p><code>script</code>则是js代码，与组件相关的代码都写在这里，使用export抛出。</p>
 <p><code>style</code>就是css样式，这里的scoped关键字是为了防止类名重复导致组件样式污染。</p>
 <p>我们同样可以在单文件组件中使用数据和方法，计算属性，监听器，组件生命周期等，这些内容可以在另一篇博客中看到<a target="_blank" rel="noopener" href='https://blog.zhaojiuyi.top/2022/05/28/Vue%E5%85%A5%E9%97%A8/#toc-heading-6'>vue入门</a>。</p>
-<p>关于单文件组件中一些常见用法</p>
+<p>关于单文件组件中一些常见语法</p>
 <pre class="language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
   &lt;div&gt;
     &lt;div class&#x3D;&quot;title-white&quot;&gt;
-      &#123;&#123; title &#125;&#125; &lt;!--模板语法，使用data返回的数据--&gt;
+      &#123;&#123; title &#125;&#125; &lt;!--模板语法，使用data返回的数据- -&gt;
     &lt;&#x2F;div&gt;
     &lt;!--  使用注册的组件  --&gt;
     &lt;login&gt;&lt;&#x2F;login&gt;
@@ -777,8 +777,7 @@ export default &#123;
 <p>在<code>/</code>路径下我们注册了一个名为HelloWorld的组件，这意味着，当浏览器路径为根路径时，HelloWorld这个组件就会被渲染，展示在页面中。</p>
 <p>值得注意的是，我们通常把一个页面拆分成多个组件，所以在通过路由渲染组件时，我们应该把组件渲染在那个位置？<code>router-view</code>标签就帮我们做了这样一件事情，它会负责将匹配到的路由渲染到<code>router-view</code>标签所在的位置。</p>
 <p>整理一下逻辑，我们先以用App.vue为模板创建了一个vue实例，接下来所有的组件都将在这个实例中进行渲染，然后为根路径配置了一个组件，在这个模板中，我们使用了<code>router-view</code>标签渲染路径匹配到的组件，项目运行时，首先打开根目录，此时匹配到了HelloWorld这个组件，所以该组件就被<code>router-view</code>渲染出来了。</p>
-<p><strong>常用配置</strong></p>
-<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 页面跳转逻辑</span>
+<h3 id="常用配置"><a href="#常用配置" class="headerlink" title="常用配置"></a>常用配置</h3><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 页面跳转逻辑</span>
 <span class="token keyword">let</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
   <span class="token punctuation">&#123;</span>
     <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token comment">//路由地址</span>
@@ -814,8 +813,7 @@ export default &#123;
 
 <span class="token punctuation">]</span></code></pre>
 
-<p><strong>路由守卫</strong></p>
-<p>上面的例子中提到了局部的路由守卫，下面是全局路由守卫</p>
+<h3 id="路由守卫"><a href="#路由守卫" class="headerlink" title="路由守卫"></a>路由守卫</h3><p>上面的例子中提到了局部的路由守卫，下面是全局路由守卫</p>
 <pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 全局路由守卫,实现前端登录拦截</span>
 router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
   <span class="token comment">//判断是否存在token，不存在则跳转登录</span>
@@ -836,7 +834,13 @@ router<span class="token punctuation">.</span><span class="token function">befor
   <span class="token punctuation">]</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">)</span></code></pre>
 
-<h2 id="四、vuex状态管理"><a href="#四、vuex状态管理" class="headerlink" title="四、vuex状态管理"></a>四、vuex状态管理</h2><h2 id="五、axios封装与使用"><a href="#五、axios封装与使用" class="headerlink" title="五、axios封装与使用"></a>五、axios封装与使用</h2><h2 id="六、ElementUI组件库的使用"><a href="#六、ElementUI组件库的使用" class="headerlink" title="六、ElementUI组件库的使用"></a>六、ElementUI组件库的使用</h2><h2 id="七、sass安装与基本语法"><a href="#七、sass安装与基本语法" class="headerlink" title="七、sass安装与基本语法"></a>七、sass安装与基本语法</h2>
+<h2 id="四、vuex状态管理"><a href="#四、vuex状态管理" class="headerlink" title="四、vuex状态管理"></a>四、vuex状态管理</h2><p><a target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/">vuex官方文档</a></p>
+<p>Vuex 是一个专为 Vue.js 应用程序开发的<strong>状态管理模式 + 库</strong></p>
+<p>在传统的vue应用中，我们通过用户操作来修改状态，并通过状态的改变驱动视图的更新</p>
+<p>但是，当我们的应用遇到<strong>多个组件共享状态</strong>时，单向数据流的简洁性很容易被破坏</p>
+<p>vuex可以帮助我们抽取组件的共享状态，以一个全局单例模式进行管理</p>
+<p>通过定义和隔离状态管理中的各种概念并通过强制规则维持视图和状态间的独立性，我们的代码将会变得更结构化且易维护。</p>
+<h3 id="安装vuex"><a href="#安装vuex" class="headerlink" title="安装vuex"></a>安装vuex</h3><h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h2 id="五、axios封装与使用"><a href="#五、axios封装与使用" class="headerlink" title="五、axios封装与使用"></a>五、axios封装与使用</h2><h3 id="安装axios"><a href="#安装axios" class="headerlink" title="安装axios"></a>安装axios</h3><h3 id="axios封装"><a href="#axios封装" class="headerlink" title="axios封装"></a>axios封装</h3><h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><h2 id="六、ElementUI组件库的使用"><a href="#六、ElementUI组件库的使用" class="headerlink" title="六、ElementUI组件库的使用"></a>六、ElementUI组件库的使用</h2><h3 id="安装ElementUI"><a href="#安装ElementUI" class="headerlink" title="安装ElementUI"></a>安装ElementUI</h3><h3 id="全局引入组件"><a href="#全局引入组件" class="headerlink" title="全局引入组件"></a>全局引入组件</h3><h3 id="api方式引入组件"><a href="#api方式引入组件" class="headerlink" title="api方式引入组件"></a>api方式引入组件</h3><h2 id="七、sass安装与基本语法"><a href="#七、sass安装与基本语法" class="headerlink" title="七、sass安装与基本语法"></a>七、sass安装与基本语法</h2><h3 id="sass安装"><a href="#sass安装" class="headerlink" title="sass安装"></a>sass安装</h3><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3>
                 
             </div>
             <hr/>
