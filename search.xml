@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>WebSocket实现简单聊天功能</title>
+      <link href="/2022/08/26/WebSocket%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E8%81%8A%E5%A4%A9%E5%8A%9F%E8%83%BD/"/>
+      <url>/2022/08/26/WebSocket%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E8%81%8A%E5%A4%A9%E5%8A%9F%E8%83%BD/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前端手写瀑布流</title>
       <link href="/2022/08/24/%E5%89%8D%E7%AB%AF%E6%89%8B%E5%86%99%E7%80%91%E5%B8%83%E6%B5%81/"/>
       <url>/2022/08/24/%E5%89%8D%E7%AB%AF%E6%89%8B%E5%86%99%E7%80%91%E5%B8%83%E6%B5%81/</url>
@@ -136,9 +149,9 @@
       
         <tags>
             
-            <tag> scrapy </tag>
-            
             <tag> selenium </tag>
+            
+            <tag> scrapy </tag>
             
             <tag> peewee </tag>
             
@@ -219,8 +232,6 @@
       
         <tags>
             
-            <tag> selenium </tag>
-            
             <tag> requests </tag>
             
             <tag> BeautifulSoup </tag>
@@ -228,6 +239,8 @@
             <tag> cookie </tag>
             
             <tag> session </tag>
+            
+            <tag> selenium </tag>
             
         </tags>
       
