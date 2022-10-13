@@ -442,20 +442,38 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
 </header>
 
     <main class="games-main">
-<h3 class="game-snake">贪吃蛇小游戏</h3>
-<script defer="defer" src="/js/bundle.js">
-</script></head><body><div id="main"><div id="stage"><div id="snake"><div id="head"></div></div><div id="food"></div></div><div id="score-panel"><div>SCORE: <span id="socre">0</span></div><div>level: <span id="panel">1</span></div></div></div><h5 id="newGame">新游戏</h5>
+    <h3 class="game-snake">贪吃蛇小游戏</h3>
+    <script defer="defer" src="/js/bundle.js"></script>
+    <div id="main">
+        <div id="stage">
+            <div id="snake">
+                <div id="head"></div>
+            </div>
+            <div id="food"></div>
+        </div>
+        <div id="score-panel">
+            <div>SCORE: <span id="socre">0</span></div>
+            <div>level: <span id="panel">1</span></div>
+        </div>
+    </div>
+    <h5 id="newGame" style="color: #6388d6">新游戏</h5>
 </main>
+<script>
+window.addEventListener("keydown",(event)=>{
+        event.preventDefault();
+    })
+</script>
 <style>
-.games-main{
-    width: 100%;
-    height: 70vh;
-    padding: 30px;
-}
-.game-snake{
-    width: 100%;
-    text-align: center;
-}
+    .games-main {
+        width: 100%;
+        height: 100vh;
+        padding: 30px;
+    }
+
+    .game-snake {
+        width: 100%;
+        text-align: center;
+    }
 
 </style>
 
@@ -596,7 +614,6 @@ VANTA.BIRDS({el: "body",mouseControls: true,touchControls: true,gyroControls: fa
 </footer>
 
 <div class="progress-bar"></div>
-
 
 
     <!-- 搜索遮罩框 -->
